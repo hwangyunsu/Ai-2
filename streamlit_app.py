@@ -27,7 +27,7 @@ st.success("모델이 성공적으로 로드되었습니다!")
 
 # 모델의 분류 라벨 출력
 labels = learner.dls.vocab
-#st.write(labels)
+st.write(labels)
 st.title(f"이미지 분류기 (Fastai) - 분류 라벨: {', '.join(labels)}")
 
 # 파일 업로드 컴포넌트 (jpg, png, jpeg, webp, tiff 지원)
@@ -51,12 +51,12 @@ if uploaded_file is not None:
     # 클래스별 확률을 HTML과 CSS로 시각화
     st.markdown("<h3>클래스별 확률:</h3>", unsafe_allow_html=True)
 
-    # if prediction == labels[0]:
-    #     st.write("중냉 꿋굿")
-    # elif prediction == labels[1]:
-    #     st.write("짜장면은 굿")
-    # elif prediction == labels[2]:
-    #     st.write("짬뽕은 맵지만 맛있어!!")
+     if prediction == labels[0]:
+         st.write("중냉 굿")
+     elif prediction == labels[1]:
+         st.write("짜장면도 굿")
+     elif prediction == labels[2]:
+         st.write("짬뽕")
 
     for label, prob in zip(labels, probs):
         # HTML 및 CSS로 확률을 시각화
