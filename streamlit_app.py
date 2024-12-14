@@ -12,7 +12,7 @@ file_id = '1Yd9ooq-ZZ8uzOeH4nTTqlpcR1eOEsP7r'
 # Google Drive에서 파일 다운로드 함수
 @st.cache(allow_output_mutation=True)
 def load_model_from_drive(file_id):
-    url = f'https://drive.google.com/uc?id={file_id}'
+    url = f'1Eb4QqDKYjeaX66xBoMEUNO3RzuTP8sTm'
     output = 'model.pkl'
     gdown.download(url, output, quiet=False)
 
